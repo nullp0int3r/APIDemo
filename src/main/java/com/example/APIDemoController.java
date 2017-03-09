@@ -1,17 +1,15 @@
 package com.example;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.ApiParam;
 
-@RestController
-public class APIDemoController {
+@Controller
+public class APIDemoController implements APIDemo{
 
-	
-	@RequestMapping(value = "/echo", method = RequestMethod.GET)
-	  public ResponseEntity<String> echo(@RequestParam(value = "message") String message) {
+    public ResponseEntity<String> echo(@ApiParam(value = "message", required = true) @RequestParam(value = "message", required = true) String message) {
+
 	    return ResponseEntity.ok(message);
 	  }
 	
