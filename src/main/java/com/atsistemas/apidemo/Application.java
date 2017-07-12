@@ -1,4 +1,4 @@
-package com.example;
+package com.atsistemas.apidemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,10 +18,11 @@ import static com.google.common.base.Predicates.or;
 
 @SpringBootApplication
 @EnableSwagger2 //Enable swagger 2.0 spec
-@ComponentScan(basePackageClasses = {
-        HomeController.class,
-        APIDemoController.class
-})
+//@ComponentScan(basePackageClasses = {
+//        HomeController.class,
+//        APIDemoController.class
+//})
+//@ComponentScan(basePackages="com.atsistemas.apidemo")
 public class Application {
 
 	public static void main(String[] args) {
